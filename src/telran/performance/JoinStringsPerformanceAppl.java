@@ -2,7 +2,10 @@ package telran.performance;
 
 import java.util.Arrays;
 
-import telran.text.*;
+import telran.text.JoinStrings;
+import telran.text.JoinStringsOnBuilder;
+import telran.text.JoinStringsOnStandard;
+import telran.text.JoinStringsOnString;
 
 public class JoinStringsPerformanceAppl {
 
@@ -14,7 +17,7 @@ public class JoinStringsPerformanceAppl {
 		PerformanceTest onBuilderTest = getTest("JoinStringsOnBuilder", strings, new JoinStringsOnBuilder());
 		PerformanceTest onStandardTest = getTest("JoinStringsOnStandard", strings, new JoinStringsOnStandard());
 		PerformanceTest onStringTest = getTest("JoinStringsOnString", strings, new JoinStringsOnString());
-		
+
 		onBuilderTest.run();
 		onStandardTest.run();
 		onStringTest.run();
@@ -26,7 +29,7 @@ public class JoinStringsPerformanceAppl {
 	}
 
 	private static String getTestName(String className) {
-		
+
 		return String.format("%s; Number of the strings is %d", className, N_STRINGS);
 	}
 

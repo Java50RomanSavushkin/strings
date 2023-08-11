@@ -7,9 +7,9 @@ public class JoinStringsOnBuilder implements JoinStrings {
 		String res = "";
 		if (strings != null && strings.length > 0) {
 			StringBuilder builder = new StringBuilder(strings[0]);
-			for (int i = 1; i < strings.length; i++) {
+			for(int i = 1; i < strings.length; i++) {
 				builder.append(delimiter).append(strings[i]);
-
+				
 			}
 			res = builder.toString();
 		}
